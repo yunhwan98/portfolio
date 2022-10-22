@@ -2,17 +2,20 @@
   --header-height: 3rem;
   --nav-width: 324px;
 
+  /*bold*/
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
 
+  /*colors*/
   --first-color: #cc4b2c;
   --first-color-dark: #912d14;
   --first-color-darken: #481509;
   --text-color: #5c413b;
-  --text-color-light: #b8877b;
-  --text-color-ligthen: #f0b4a5;
+  --first-color-light: #b8877b;
+  --first-color-lighten: #ffffff;
 
+  /*size*/
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -20,7 +23,7 @@
   --small-font-size: 0.7rem;
   --smaller-font-size: 0.5rem;
 
-  /*Margenes*/
+  /*margin*/
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -30,6 +33,7 @@
   /*z-index*/
   --z-fixed: 100;
 }
+
 @media screen and (min-width: 768px) {
   :root {
     --header-height: 3rem;
@@ -363,6 +367,7 @@ img {
 
 .education_content {
   display: grid;
+  row-gap: 2rem;
   grid-template-columns: 1fr max-content 1fr;
 }
 
@@ -376,6 +381,11 @@ img {
 .education_specialty {
   display: block;
   font-size: var(--smaller-font-size);
+}
+
+.education_year,
+.education_university {
+  text-align: right;
 }
 
 .education_time {
@@ -499,4 +509,45 @@ img {
 .cotact_text {
   display: block;
   padding-left: 1rem;
+}
+
+/*footer*/
+.footer {
+  background-color: var(--first-color-darken);
+  color: var(--first-color-lighten);
+  text-align: center;
+}
+
+.footer_title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.footer_description {
+  margin-bottom: var(--mb-2);
+}
+
+.footer_social {
+  margin-bottom: 3rem;
+}
+
+.footer_link {
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--first-color-lighten);
+  font-size: 1.1rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin: 0 var(--mb-1);
+  transition: 0.3s;
+}
+
+.footer_link:hover {
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+}
+
+.footer_copy {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
 }
