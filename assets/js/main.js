@@ -31,19 +31,20 @@ window.addEventListener("scroll", scrollActive);
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
-
+  console.log(scrollY);
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     sectionId = current.getAttribute("id");
-
+    console.log(sectionId);
+    console.log(sectionId);
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
-        .querySelector(".nav_menu a[href*=]" + sectionId + "]")
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
         .classList.add("active");
     } else {
       document
-        .querySelector(".nav_menu a[href*=]" + sectionId + "]")
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
         .classList.remove("active");
     }
   });
