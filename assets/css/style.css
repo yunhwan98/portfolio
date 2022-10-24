@@ -403,6 +403,8 @@ img {
 .works_img {
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
   border-radius: 0.5rem;
 }
 
@@ -415,7 +417,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(204, 75, 44, 0.7);
+  background: rgba(42, 127, 83, 0.288);
   border-radius: 0.5rem;
   transition: 0.3s;
 }
@@ -560,6 +562,7 @@ img {
 
   .contact_inputs {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
   }
 
